@@ -12,6 +12,9 @@ Here is the functionality of the button:
 - Display the number of occurrences of the word “of” in a dialog box.
 ![](occurrences.png)
 
+## Installation
+
+
 ## Code Explaination
 
 [ribbon.xml](AddinTest/Ribbon.xml) 
