@@ -16,13 +16,13 @@ namespace AddInTest
     public class Ribbon : Office.IRibbonExtensibility
     {
         private Office.IRibbonUI ribbon;
-        // when first button is clicked
+        // when first button is clicked-
         public void OnFirstButton(Office.IRibbonControl control)
         {
             // iterates through all text in document adding highlight at each instance of the word "of"
             Word.Find find = Globals.ThisAddIn.Application.ActiveDocument.Content.Find;
             find.Replacement.Font.ColorIndexBi = Word.WdColorIndex.wdYellow;
-            find.Execute(FindText: "of", MatchCase: false, Replace: Word.WdReplace.wdReplaceAll);
+            find.Execute(FindText: "of", MatchCase: false, MatchWholeWord: true, Replace: Word.WdReplace.wdReplaceAll);
             // displays the occurrences of the word of in a dialog box
             Word.Range range = Globals.ThisAddIn.Application.ActiveDocument.Range();
             MessageBox.Show( "Occurrences of the word \"of\" - " + range.Text.Split(' ').Count( word => word.Equals("of") ) );
