@@ -12,8 +12,6 @@ Here is the functionality of the button:
 - Display the number of occurrences of the word “of” in a dialog box.
 ![](occurrences.png)
 
-## installation
-
 ## Code Explaination
 
 [ribbon.xml](AddinTest/Ribbon.xml) 
@@ -42,12 +40,12 @@ this file creates the test tab with the button
 ```
 [Ribbon.cs](AddInTest/Ribbon.cs) creates the backend for the button click
 ```cs
- public void OnFirstButton(Office.IRibbonControl control)
+public void OnFirstButton(Office.IRibbonControl control)
         {
             // iterates through all text in document adding highlight at each instance of the word "of"
             Word.Find find = Globals.ThisAddIn.Application.ActiveDocument.Content.Find;
             find.Replacement.Font.ColorIndexBi = Word.WdColorIndex.wdYellow;
-            find.Execute(FindText: "of", MatchCase: false, Replace: Word.WdReplace.wdReplaceAll);
+            find.Execute(FindText: "of", MatchCase: false, MatchWholeWord: true, Replace: Word.WdReplace.wdReplaceAll);
             // displays the occurrences of the word of in a dialog box
             Word.Range range = Globals.ThisAddIn.Application.ActiveDocument.Range();
             MessageBox.Show( "Occurrences of the word \"of\" - " + range.Text.Split(' ').Count( word => word.Equals("of") ) );
