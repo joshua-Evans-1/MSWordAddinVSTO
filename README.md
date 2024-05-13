@@ -13,7 +13,12 @@ Here is the functionality of the button:
 ![](occurrences.png)
 
 ## Installation
+to install 
+1. download the release zip file from here: [release zip file](https://github.com/joshua-Evans-1/MSWordAddinVSTO/releases/download/v1.0/addintest.zip) or download it from the release pages of this repo.
 
+2. unzip the file and run the setup.exe.
+
+3. open up microsoft word.
 
 ## Code Explaination
 
