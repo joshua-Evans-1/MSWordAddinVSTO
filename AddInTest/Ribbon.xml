@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+    <ribbon>
+        <tabs>
+            <tab idMso="TabAddIns" label="Test">
+                <group id="icTools" label="icTools">
+                    <button id="firstButton" screentip="first" supertip="Iterate through all the text in the document, adding a highlight at each instance of the word &quot;of&quot;." onAction="OnFirstButton" label="First" size="large" />
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
